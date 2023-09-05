@@ -1,3 +1,4 @@
+import Nav from "./components/Nav";
 import {
   CustomerReviews,
   Footer,
@@ -8,11 +9,10 @@ import {
   Subscribe,
   SuperQuality,
 } from "./sections";
-
 const App = () => {
   return (
     <main className='relative'>
-      {/* <Nav /> */}
+      <Nav />
       <section className='xl:padding-l wide:padding-r padding-b'>
         <Hero />
       </section>
