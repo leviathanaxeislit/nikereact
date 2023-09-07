@@ -42,10 +42,7 @@ const SuperQuality = () => {
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >
-        <motion.div
-          initial={{ opacity: 1, scale: 0.5 }}
-          animate={controls}
-        >
+        <motion.div initial={{ opacity: 1, scale: 0.5 }} animate={controls}>
           <img
             src={shoe8}
             alt="super quality shoe"
