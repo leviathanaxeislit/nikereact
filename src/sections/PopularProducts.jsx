@@ -21,7 +21,7 @@ const PopularProducts = () => {
               key={product.name}
               whileHover={{
                 scale: 1.05,
-                boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)",
+                boxShadow: "0px 0px 2px rgba(0, 0, 0, 0.2)",
               }} // Define hover animations
             >
               <PopularProductCard {...product} />
