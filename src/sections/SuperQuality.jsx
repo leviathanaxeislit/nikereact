@@ -38,20 +38,33 @@ const SuperQuality = () => {
         </div>
       </div>
       <div
-        className="flex flex-1 justify-center items-center"
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
-      >
-        <motion.div initial={{ opacity: 1, scale: 0.5 }} animate={controls}>
-          <img
-            src={shoe8}
-            alt="super quality shoe"
-            width={570}
-            height={522}
-            className="object-contain"
-          />
-        </motion.div>
-      </div>
+  className="flex flex-1 justify-center items-center"
+  onMouseEnter={() => setHovered(true)}
+  onMouseLeave={() => setHovered(false)}
+>
+  <motion.div
+    initial={{ opacity: 1, scale: 1 }}
+    animate={{
+      rotateY: hovered ? 180 : 360,
+      rotateX: hovered ? 720 : 360, // Add rotateX property for 3D effect
+      opacity: 1,
+      scale: 1
+    }}
+    transition={{ duration: 1.5 }}
+    style={{ 
+      perspective: "1000px",  // dd perspective for 3D effect
+    transformStyle: "preserve-3d",
+    transformOrigin: "center",}}
+>
+    <img
+      src={shoe8}
+      alt="super quality shoe"
+      width={570}
+      height={522}
+      className="object-contain"
+    />
+  </motion.div>
+</div>
     </section>
   );
 };
